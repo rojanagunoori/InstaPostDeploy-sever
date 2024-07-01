@@ -14,13 +14,13 @@ const io = new Server(server, {
 
 app.use(cors());*/
  cors: {
-    origin: 'https://your-frontend-url.com', 
+    origin: 'https://instapost-deploy-frontend.vercel.app', 
     methods: ['GET', 'POST']
   }
 });
 
 app.use(cors({
-  origin: 'https://your-frontend-url.com',
+  origin: 'https://instapost-deploy-frontend.vercel.app',
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type']
 }));
