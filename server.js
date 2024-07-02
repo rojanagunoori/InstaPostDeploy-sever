@@ -6,14 +6,14 @@ const cors = require('cors');
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
- cors: {
+  /*cors: {
     origin: '*',
     methods: ['GET', 'POST']
   }
 });
 
-app.use(cors());
- /*cors: {
+app.use(cors());*/
+cors: {
     origin: 'https://instapost-deploy-frontend.vercel.app', 
     methods: ['GET', 'POST']
   }
@@ -23,7 +23,7 @@ app.use(cors({
   origin: 'https://instapost-deploy-frontend.vercel.app',
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type']
-}));*/
+}));
 
 const users = {}; // Stores { username: socketId }
 
